@@ -1,0 +1,53 @@
+modelname: Hourglass
+describe: Hourglass
+heads: {'hm_t': 1, 'hm_l': 1,
+                'hm_b': 1, 'hm_r': 1,
+                'hm': 1,'tr':2,#'dense_wh':4,
+                'offsets':2}
+# max polygon per image
+max_annotation : 200
+
+# max point per polygon
+max_points : 20
+
+num_stack: 1
+path:
+  # save models
+  model_dir: exp/checkpoint/Hourglass_104
+
+  # resume training from a existed models
+  resume_path: exp/checkpoint/Hourglass/Hourglass_101_epoch_66_550.111891746521.pth
+  train_data_path : /home/pei_group/jupyter/Wujingjing/data/totaltext/ #D:/Python Project/data/totaltext/ #D:\python_Project\data\totaltext\ #D:\python_Project\data\totaltext\ # /home/pei_group/jupyter/Wujingjing/data/totaltext/ #D:/Python Project/data/totaltext/
+  # tensorboard savepath
+  writer_path: exp/tensorlog
+  test_data_path:  /home/pei_group/jupyter/Wujingjing/data/totaltext/ #D:\python_Project\data\totaltext\ # D:/Python Project/data/totaltext/
+  vis_dir: output/totaltext_vis
+  output_dir: output/totaltext_text
+train:
+  batchsize: 8
+  input_size: 512
+  data_parallel : False
+  max_epoch: 500
+  means: [0.485, 0.456, 0.406]
+  stds: [0.229, 0.224, 0.225]
+  downsample: 4
+  hm_weight: 10
+  tr_weight: 1
+  geo_weight: 1
+  off_weight: 1
+  lr: 0.0003
+  # train epochs
+  niter: 1000
+  # whether to save models every * epochs (true or false)
+  step_save: True
+  # save models every * epochs (nums, 1, 2 etc)
+  save_step: 1
+  # whether to resume from a existed models (true or false)
+  resume: 0
+
+test:
+  max_diffusion: 7
+  tr_thresh: 0.6
+  hm_thresh: 0.2
+  batchsize: 4
+  gt_path: E:/Python Project/data/totaltext/gt/Test #

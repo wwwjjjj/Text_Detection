@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: lanms
+Version: 1.0.2
+Summary: Locality-Aware Non-Maximum Suppression
+Home-page: https://github.com/Parquery/lanms
+Author: argmen (boostczc@gmail.com) is code author, Dominik Walder (dominik.walder@parquery.com) and Marko Ristin (marko@parquery.com) only packaged the code
+Author-email: devs@parquery.com
+License: GNU General Public License v3.0
+Description: UNKNOWN
+Keywords: locality aware non-maximum suppression
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.5

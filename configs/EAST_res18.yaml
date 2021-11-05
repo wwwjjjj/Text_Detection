@@ -1,0 +1,31 @@
+modelname: EAST_res18
+describe: EAST_res18
+
+path:
+  # save models
+  model_dir: exp/checkpoint/EAST_res18
+  # resume training from a existed models
+  resume_path: exp/checkpoint/EAST/east_82.pth
+  train_data_path: /home/pei_group/jupyter/Wujingjing/dataset/ICDAR2015/ch4_training_images
+  train_gt_path: /home/pei_group/jupyter/Wujingjing/dataset/ICDAR2015/ch4_training_localization_transcription_gt
+  # tensorboard savepath
+  writer_path: exp/tensorlog
+
+train:
+  batchsize: 8
+  imagesize: 512
+  max_epoch: 500
+  data_parallel : False
+  lr: 0.0003
+  # train epochs
+  niter: 1000
+  # whether to save models every * epochs (true or false)
+  step_save: True
+  # save models every * epochs (nums, 1, 2 etc)
+  save_step: 1
+  # whether to resume from a existed models (true or false)
+  resume: 0
+
+test:
+  test_path: /home/pei_group/jupyter/Wujingjing/dataset/ICDAR2015/ch4_test_images/
+  batchsize: 8

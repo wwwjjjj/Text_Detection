@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6f40e14c-32f3-49ef-a5b3-66282a0affb7" name="pei_pytorch">
+        <fileTransfer accessType="SFTP" host="219.223.251.171" port="22" sshConfigId="ec7a8968-1b3f-485f-a0c2-c0169718ff1f" sshConfig="pei_group@219.223.251.171:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
